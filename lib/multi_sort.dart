@@ -12,7 +12,8 @@ extension MultiSort on List {
     int compare(int i, dynamic a, dynamic b) {
       if (a.get(preferrence[i]) == b.get(preferrence[i]))
         return 0;
-      else if (a.get(preferrence[i]) > b.get(preferrence[i]))
+//      else if (a.get(preferrence[i]) > b.get(preferrence[i]))
+      else if (a.get(preferrence[i]).compareTo(b.get(preferrence[i])) > 0)
         return criteria[i] ? 1 : -1;
       else
         return criteria[i] ? -1 : 1;
